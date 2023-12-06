@@ -1,18 +1,17 @@
+import {useState} from "react";
 import AnimalShow from "./components/AnimalShow";
 
 function App() {
+    const [count, setCount] = useState(0);
+
     const handleClick = () => {
-        console.log("clicked");
-    };
-    const handleMouseMove = () => {
-        console.log("Hovered");
+        setCount(count + 1);
     };
 
     return (<div className="App">
         <h1>Animal Ranch App</h1>
         <button type="button" onClick={handleClick}>Add Animal</button>
-        <button type="button" onClick={()=>{console.log("clicked 2")}}>Add Animal 2</button>
-        <button type="button" onMouseMove={handleMouseMove}>Hover Animal</button>
+        <div>Animal Count: {count}</div>
     <AnimalShow />
     </div>);
 };
