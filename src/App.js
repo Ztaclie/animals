@@ -11,6 +11,7 @@ function App() {
     return (<div className="App">
         <h1>Animal Ranch App</h1>
         <button type="button" onClick={handleClick}>Add Animal</button>
+        <button type="button" onClick={()=>{console.log("clicked 2")}}>Add Animal 2</button>
         <button type="button" onMouseMove={handleMouseMove}>Hover Animal</button>
     <AnimalShow />
     </div>);
